@@ -8,3 +8,8 @@ request.send();
 request.onload = function() {
   const data = request.response;
 }
+function populateHeader(jsonObj) {
+  const myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['followers'];
+  header.appendChild(myH1);
+}
