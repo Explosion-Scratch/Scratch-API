@@ -7,6 +7,7 @@ request.responseType = 'json';
 request.send();
 request.onload = function() {
   const data = request.response;
+	populateHeader(data);
 }
 function populateHeader(jsonObj) {
   const myH1 = document.createElement('h1');
