@@ -48,3 +48,8 @@ hr:after {
   color: #101010;
   font-size: 18px;
 }
+button {
+	border-radius: 5000px;
+	background: #101010;
+	border: none;
+}
