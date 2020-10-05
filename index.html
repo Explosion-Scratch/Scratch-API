@@ -41,7 +41,10 @@
 			$('#user_id').html('User ID: ' + data['id']);
 			$('#country').html('Country: ' + data['country']);
 			$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
-			$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
+			
+			if (data['bio'] !== '') {
+				$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
+			}
 			$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
 		});
 	}
