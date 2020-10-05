@@ -11,4 +11,32 @@
     <script src="script.js"></script>
   </body>
 </html>
-<p id='test'></p>
+<div class='container'>
+	<h1>Hi there!</h1>
+	<hr>
+	<p>Welcome! This project uses the Scratch API and ScratchDB by DatOneLefty to provide statistics about scratch! Enjoy!</p>
+	<div class='card'>
+		<h1 id='header'></h1>
+		<div id='followers'></div>
+		<div id='user_id'></div>
+		<div id='country'></div>
+		<div id='followers_rank'></div>
+		<div id='messages'></div>
+		<div id='bio'></div>
+		<div id='WIWO'></div>
+	</div>
+</div>
+<script>
+	user = prompt('Which user?');
+	url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
+	$('#header').html(user);
+	$.getJSON(url, 
+		function(data) {
+			$('#followers').html('Followers: ' + data['followers']);
+			$('#user_id').html('User ID: ' + data['id']);
+			$('#country').html('Country: ' + data['country']);
+			$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
+			$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
+			$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
+	});
+</script>
