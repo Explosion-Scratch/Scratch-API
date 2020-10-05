@@ -29,7 +29,7 @@
 </div>
 <script>
 	function go() {
-	user = prompt('Which user?');
+	user = $('input').val();
 	url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
 	$('#header').html(user);
 	$.getJSON(url, 
