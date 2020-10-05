@@ -41,7 +41,7 @@
 			$('#user_id').html('User ID: ' + data['id']);
 			$('#country').html('Country: ' + data['country']);
 			$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
-			$('#bio').html('<i>No bio.</i>')
+			$('#bio').html('<details><summary>Biography:</summary><i>No bio.</i></details>')
 			$('#WIWO').html('<i>No What I\'m working on.</i>')
 			if (data['bio'] !== '') {
 				$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
