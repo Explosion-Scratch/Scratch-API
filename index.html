@@ -46,7 +46,9 @@
 			if (data['bio'] !== '') {
 				$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
 			}
-			$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
+			if (data['work'] !== '') {
+				$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
+			}
 		});
 	}
 </script>
