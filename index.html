@@ -34,7 +34,7 @@
 	function go() {
 		user = $('input').val();
 		url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
-		messages_url = 'https://api.scratch.mit/edu/' + user + 'messages/count';
+		messages_url = 'https://api.scratch.mit.edu/users/' + user + '/messages/count';
 		$('#header').html(user);
 		$.getJSON(url, 
 			function(data) {
