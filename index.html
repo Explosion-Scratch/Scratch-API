@@ -32,23 +32,25 @@
 </div>
 <script>
 	function go() {
-	user = $('input').val();
-	url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
-	$('#header').html(user);
-	$.getJSON(url, 
-		function(data) {
-			$('#followers').html('Followers: ' + data['followers']);
-			$('#user_id').html('User ID: ' + data['id']);
-			$('#country').html('Country: ' + data['country']);
-			$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
-			$('#bio').html('<details><summary>Biography:</summary><blockquote><i>No bio.</i></blockquote></details>')
-			$('#WIWO').html("<details><summary>What I'm working on:</summary><blockquote><i>No What I'm working on</i></blockquote></details>")
-			if (data['bio'] !== '') {
-				$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
-			}
-			if (data['work'] !== '') {
-				$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
-			}
-		});
+		user = $('input').val();
+		url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
+		messages_url = 'https://api.scratch.mit/edu/' + user + 'messages/count';
+		$('#header').html(user);
+		$.getJSON(url, 
+			function(data) {
+				$('#followers').html('Followers: ' + data['followers']);
+				$('#user_id').html('User ID: ' + data['id']);
+				$('#country').html('Country: ' + data['country']);
+				$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
+				$('#bio').html('<details><summary>Biography:</summary><blockquote><i>No bio.</i></blockquote></details>')
+				$('#WIWO').html("<details><summary>What I'm working on:</summary><blockquote><i>No What I'm working on</i></blockquote></details>")
+				if (data['bio'] !== '') {
+					$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
+				}
+				if (data['work'] !== '') {
+					$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
+				}
+			});
+		$getJSON()
 	}
 </script>
