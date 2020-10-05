@@ -52,8 +52,8 @@
 				}
 			});
 		$.getJSON(messages_url, 
-			function(data) {
-				$('#messages').html('Messages: ' + data['count']);
+			function(messages) {
+				$('#messages').html('Messages: ' + messages['count']);
 		});
 	}
 </script>
