@@ -17,7 +17,7 @@
 	<p>Welcome! This project uses the Scratch API and ScratchDB by DatOneLefty to provide statistics about scratch! Enjoy!</p>
 	<input type='text'><button onclick='go()'>Go!</button>
 	<div class='card'>
-		<h1 id='header'></h1>
+		<h1 id='header'>Enter a user!</h1>
 		<div id='followers'></div>
 		<div id='user_id'></div>
 		<div id='country'></div>
@@ -28,6 +28,7 @@
 	</div>
 </div>
 <script>
+	function go() {
 	user = prompt('Which user?');
 	url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
 	$('#header').html(user);
@@ -39,5 +40,6 @@
 			$('#followers_rank').html('Followers ranking: ' + data['statistics']['ranks']['followers']);
 			$('#bio').html('<details><summary>Biography:</summary><blockquote>' + data['bio'] + '</blockquote></details>');
 			$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
-	});
+		});
+	}
 </script>
