@@ -51,5 +51,9 @@ hr:after {
 button {
 	border-radius: 5000px;
 	background: #101010;
-	border: none;
+	border: 1px solid rgba(255, 145, 0, 0.623);
+	transition-duration: 0.5s;
+}
+button:hover {
+	box-shadow: 0 0 0 5px rgba(255, 145, 0, 0.2), 0 0 0 1px rgba(255, 145, 0, 0.836);
 }
