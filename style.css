@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+* {
+	background: #101010;
+	color: white;
+	font-family: Montserrat;
+}
+.container {
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
+}
+.card {
+	transition-duration: 0.5s;
+	width: 400px;
+	height: fit-content;
+	border-radius: 10px;
+	box-shadow: 0 0 0 2px rgba(255, 145, 0, 0.623);
+	padding: 10px 20px;
+	margin: 30px;
+}
+h1 {
+	text-align: center;
+}
+.card:hover {
+	box-shadow: 0 0 0 5px rgba(255, 145, 0, 0.2), 0 0 0 1px rgba(255, 145, 0, 0.836), 0 0 0 10px rgba(255, 145, 0, 0.151);
+}
+blockquote {
+	border-radius: 5px;
+	border: 1px solid rgba(255, 145, 0, 0.623);
+	padding: 5px;
+	width: 80%;
+}
+*:focus {
+	outline: none;
+}
+hr {
+  border: 0;
+  border-top: 4px double rgba(255, 145, 0, 0.836);
+  text-align: center;
+}
+hr:after {
+  content: '\2665';
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  padding: 0 10px;
+  background: #101010;
+  color: #101010;
+  font-size: 18px;
+}
