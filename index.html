@@ -25,7 +25,7 @@
 		<div id='user_id'></div>
 		<div id='country'></div>
 		<div id='followers_rank'></div>
-		<div id='messages'></div>
+		<div id='messages'>Messages</div>
 		<div id='bio'></div>
 		<div id='WIWO'></div>
 	</div>
@@ -51,8 +51,9 @@
 					$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
 				}
 			});
-		$getJSON(messages_url, function(data) {
-			$('#messages').html('Messages: ' + data['count']);
+		$.getJSON(messages_url, 
+			function(data) {
+				$('#messages').html('Messages: ' + data['count']);
 		});
 	}
 </script>
