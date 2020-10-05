@@ -51,6 +51,8 @@
 					$('#WIWO').html("<details><summary>What I'm Working On: </summary><blockquote>" + data['work'] + '</blockquote></details>');
 				}
 			});
-		$getJSON()
+		$getJSON(messages_url, function(data) {
+			$('#messages').html('Messages: ' + data['count']);
+		});
 	}
 </script>
