@@ -32,6 +32,7 @@
 </div>
 <script>
 	function go() {
+		$('#followers').html('Loading...');
 		user = $('input').val();
 		url = 'https://scratchdb.lefty.one/v2/user/info/' + user ;
 		messages_url = 'https://api.scratch.mit.edu/users/' + user + '/messages/count';
